@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Редактирование книги</title>
 </head>
 <body>
-$END$
+
+<h1>Редактирование книги</h1>
+
+<form action="/books/{{ book.id }}/edit" method="post">
+
+    <div>
+        <input
+            type="text"
+            name="title"
+            value="{{ book.title }}"
+        >
+    </div>
+
+    <div>
+        <input
+            type="text"
+            name="author"
+            value="{{ book.author }}"
+        >
+    </div>
+
+    <button type="submit">
+        Сохранить
+    </button>
+
+</form>
+
 </body>
-</html>
+</html>ww

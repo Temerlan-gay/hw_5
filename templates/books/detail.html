@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>{{ book.title }}</title>
 </head>
 <body>
-$END$
+
+<h1>{{ book.title }}</h1>
+
+<p>Автор: {{ book.author }}</p>
+
+<a href="/books/{{ book.id }}/edit">
+    Редактировать
+</a>
+
+<form action="/books/{{ book.id }}/delete" method="post">
+    <button type="submit">
+        Удалить
+    </button>
+</form>
+
 </body>
 </html>
